@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="sk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analýza textu</title>
+    <style>
+        #celok {
+            margin: auto;
+            width: 80%;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        #ls,
+        #ps {
+            display: inline-block;
+            width: 45%;
+            height: auto;
+            background-image: radial-gradient(rgb(4, 14, 116), rgb(9, 110, 126));
+            margin: auto;
+            height: 500px;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        button {
+            display: block;
+            margin: auto;
+            margin-top: 20px;
+        }
+
+        #textin {
+            display: block;
+            width: 80%;
+            height: 300px;
+            margin: auto;
+        }
+
+        button {
+            display: inline-block;
+            text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+            color: black;
+            background-image: linear-gradient(to right, rgb(152, 255, 92), rgba(24, 255, 213, 0.716));
+            padding: 15px;
+            margin: 0px;
+        }
+
+        #result {
+            
+            line-height: 20px;
+            text-align: left;
+        }
+
+        body {
+            color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Analýza textu</h1>
+    <div id="celok">
+        <div id="ls">
+            <h2>Vstupný text</h2>
+            <textarea name="text" id="textin"></textarea>
+            <button type="button" onclick="analyzuj()">Spustiť analýzu</button>
+            <button type="button" onclick="zasifruj()">Zašifrovať text</button><br>
+            <input type="text" name="hladaj" id="seek">
+            <button id="searchbutton" type="button" onclick="vyhladaj()">Hľadať text</button>
+
+        </div>
+        <div id="ps">
+            <h2>Výsledný text</h2>
+            <div id="result"></div>
+        </div>
+    </div>
+    <script src="./analyza.js"></script>
+</body>
+
+</html>
